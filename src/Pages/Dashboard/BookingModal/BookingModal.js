@@ -19,7 +19,7 @@ const style = {
   p: 4,
 };
 
-const BookingModal = ({ OpenBooking, handleBookingClose, singleProduct, setBookingSuccess }) => {
+const BookingModal = ({ OpenBooking, handleBookingClose, productDetails, setBookingSuccess }) => {
 
   const { user } = useAuth();
 
@@ -56,6 +56,7 @@ const BookingModal = ({ OpenBooking, handleBookingClose, singleProduct, setBooki
     })
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         if (data.insertedId) {
           setBookingSuccess(true);
           handleBookingClose();
@@ -84,7 +85,7 @@ const BookingModal = ({ OpenBooking, handleBookingClose, singleProduct, setBooki
       <Fade in={OpenBooking}>
         <Box sx={style}>
           <Typography id="transition-modal-title" variant="h6" component="h2">
-            {singleProduct?.name}
+            {productDetails?.name}
           </Typography>
 
           <form onSubmit={handleBookingSubmit}>
@@ -92,7 +93,7 @@ const BookingModal = ({ OpenBooking, handleBookingClose, singleProduct, setBooki
               disabled
               sx={{ width: '90%', m: 1 }}
               id="outlined-size-small"
-              defaultValue={singleProduct?.BDT}
+              defaultValue={productDetails?.BDT}
               size="small"
             />
 

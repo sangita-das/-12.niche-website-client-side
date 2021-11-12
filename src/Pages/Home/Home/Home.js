@@ -17,7 +17,7 @@ import Reviews from './Reviews/Reviews';
 const Home = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('/bicycle.json')
+    fetch('http://localhost:5000/items')
       .then(res => res.json())
       .then(data => setProducts(data.slice(0, 6)));
   }, []);
@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div>
 
-      <Header></Header>
+
       <Banner></Banner>
       <Services></Services>
 

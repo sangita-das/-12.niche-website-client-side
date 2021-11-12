@@ -10,50 +10,6 @@ import { Box } from '@mui/system';
 
 
 
-
-// const reviews = [
-//   {
-//     name: 'Hayden Read',
-//     profession: 'Sales Manager',
-//     description: 'Select your service, how many bikes need attention, day and time to show up. Just wait for us to arrive and rest is for us to figure out.',
-//     img: person1
-//   },
-//   {
-//     name: 'Quinn Nolan',
-//     profession: 'Teacher',
-//     description: 'We’ll show up with all of the tools, parts and accessories to get your bike/s in tip top shape! You carry on with your day just like any other.',
-//     img: person2
-//   },
-//   {
-//     name: 'Sammy Peters',
-//     profession: 'Student',
-//     description: 'After final test ride, you’re ready to go. Life is always better after a bike ride. Love what you do.',
-//     img: person3
-//   },
-//   {
-//     name: 'Jhon Rock',
-//     profession: 'Student',
-//     description: 'After final test ride, you’re ready to go. Life is always better after a bike ride. Love what you do.',
-//     img: person4
-//   },
-//   {
-//     name: 'Olivar Thomas',
-//     profession: 'Student',
-//     description: 'After final test ride, you’re ready to go. Life is always better after a bike ride. Love what you do.',
-//     img: person5
-//   },
-//   {
-//     name: 'David Smith',
-//     profession: 'Student',
-//     description: 'After final test ride, you’re ready to go. Life is always better after a bike ride. Love what you do.',
-//     img: person6
-//   },
-// ]
-
-
-
-
-
 const Review = (props) => {
   const { name, description, img, profession } = props.review;
 

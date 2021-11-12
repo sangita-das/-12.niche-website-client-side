@@ -1,5 +1,4 @@
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
@@ -11,19 +10,12 @@ const Header = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             ROAD PEDAL
           </Typography>
-          <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
+          <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}><Button color="inherit">Home</Button></Link>
+          <Link to="/reviews" style={{ textDecoration: 'none', color: 'white' }}><Button color="inherit">Reviews</Button></Link>
 
 
 
@@ -44,9 +36,13 @@ const Header = () => {
               </Box>
               :
               <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
-                <Button color="inherit">Login</Button>
+                <Button color="inherit">Login </Button>
               </NavLink>
           }
+
+
+
+
         </Toolbar>
       </AppBar>
     </Box>

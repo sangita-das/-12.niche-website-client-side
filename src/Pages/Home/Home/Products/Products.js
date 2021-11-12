@@ -11,7 +11,7 @@ import { Container } from '@mui/material';
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('/bicycle.json')
+    fetch('http://localhost:5000/items')
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);

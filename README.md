@@ -1,12 +1,12 @@
-## Website Name: Cholo-Ghuri
+## Website Name: RoadPedal
 
-**Netlify Live site[https://cholo-ghuri-assignment-11.netlify.app/].**
+**Netlify Live site[].**
 
-**Firebase Live site[https://tourism-blog-cholo-ghuri.web.app/].**
+**Firebase Live site[https://bicycles-shop-road-pedal.web.app/].**
 
-**client site code[https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-sangita-das].**
+**client site code[https://github.com/programming-hero-web-course-4/niche-website-client-side-sangita-das].**
 
-**server site code[https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-sangita-das].**
+**server site code[https://github.com/programming-hero-web-course-4/niche-website-server-side-sangita-das].**
 
 >E-Bikes, pedelecs and electric bikes – What’s the difference?
 >Are you considering the buying an electric bike? When starting to shop around, you’ll soon come across different terms and perhaps ask yourself what they all mean. What’s more, everyday vernacular differs from the definitions under road traffic law.

@@ -19,22 +19,29 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import Orders from './Pages/Dashboard/Orders/Orders';
 import Pay from './Pages/Dashboard/Pay/Pay';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
+import AddItems from './Pages/Dashboard/Dashboard/AddItems/AddItems';
+import ReviewBox from './Pages/Home/Home/ReviewBox/ReviewBox';
+import Review from './Pages/Home/Review/Review';
+import Reviews from './Pages/Home/Home/Reviews/Reviews';
+import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
+          <Header></Header>
           <Switch>
-            {/* <Route path="/appointment">
-              <Appointment />
-            </Route> */}
+
 
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
             <PrivateRoute path="/orders">
               <Orders />
+            </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+              <MyOrders />
             </PrivateRoute>
             <PrivateRoute path="/pay">
               <Pay />
@@ -45,12 +52,24 @@ function App() {
             <Route exact path="/products">
               <Products />
             </Route>
-            <Route exact path="/makeAdmin">
+            <PrivateRoute exact path="/makeAdmin">
               <MakeAdmin />
+            </PrivateRoute>
+            <Route exact path="/reviews">
+              <Reviews />
+            </Route>
+            <PrivateRoute exact path="/addItems">
+              <AddItems />
+            </PrivateRoute>
+            <Route exact path="/reviewBox">
+              <ReviewBox />
             </Route>
             <Route path="/login">
               <Login />
             </Route>
+            <PrivateRoute path="/manageOrder/:productId">
+              <ManageOrder />
+            </PrivateRoute>
             <Route path="/register">
               <Register />
             </Route>
@@ -58,9 +77,7 @@ function App() {
               <Home />
             </Route>
 
-            <PrivateRoute path="/manageOrder/:productId">
-              <ManageOrder />
-            </PrivateRoute>
+
 
             <Route path="*">
               <NotFound></NotFound>

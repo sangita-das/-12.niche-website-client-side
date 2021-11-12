@@ -11,7 +11,7 @@ const bgColor = {
 
 
 const SingleProduct = (props) => {
-  const { id, name, BDT, img, star, category } = props.product;
+  const { _id, name, BDT, img, star, category } = props.product;
   return (
     <Grid item xs={4} sm={4} md={4}>
       <Card sx={{ maxWidth: 345 }} xs={4} sm={4} md={4}>
@@ -43,7 +43,7 @@ const SingleProduct = (props) => {
         </CardActionArea>
 
         <CardActions style={bgColor}>
-          <Link href={`/manageOrder/${id}`} >
+          <Link href={`/manageOrder/${_id}`} >
             <Button sx={{ mx: "auto", width: 200 }} variant="outlined" endIcon={<SendIcon />} size="small" color="primary">
               Add to Cart
             </Button>

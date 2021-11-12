@@ -1,58 +1,82 @@
-import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow } from '@mui/material';
-import { bgcolor, Box } from '@mui/system';
+import { Button, Container, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../../hooks/useAuth';
 
 const Orders = () => {
-  const { user } = useAuth();
-  const [orders, setOrders] = useState([])
-
-
+  const [buyerOrders, setBuyerOrders] = useState([])
+  console.log(buyerOrders);
   useEffect(() => {
-    const url = `http://localhost:5000/products?email=${user.email}`
-    fetch(url)
+    fetch('http://localhost:5000/products')
       .then(res => res.json())
-      .then(data => setOrders(data));
-  }, [])
+      .then(data => setBuyerOrders(data))
+
+  }, []);
+
+  // delete user
+  const handleDelete = id => {
+    const proceed = window.confirm('Are you sure, you want to delete?');
+    if (proceed) {
+      const url = `http://localhost:5000/products/${id}`;
+      fetch(url, {
+        method: 'DELETE'
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          if (data.deletedCount) {
+            const remaining = buyerOrders.filter(buyerOrder => buyerOrder._id !== id);
+            alert('deleted successfully')
+            setBuyerOrders(remaining);
+          }
+
+        });
+    }
+  }
+
 
 
   return (
     <div>
-      <h2>Total Order: {orders.length}</h2>
-      <TableContainer component={Paper}>
-        <Table sx={{}} aria-label="Order List">
-          <TableHead>
-            <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell align="right">Email</TableCell>
-              <TableCell align="right">Phone</TableCell>
-              <TableCell align="right">Item No</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {orders.map((row) => (
-              <TableRow
-                key={row._id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.buyerName}
-                </TableCell>
-                <TableCell align="right">{row.email}</TableCell>
-                <TableCell align="right">{row.phone}</TableCell>
-                <TableCell align="right">{row.product_item}</TableCell>
+      <h2>This is order list page , all orders are showing.</h2>
 
-                <Button sx={{ m: 2, bgcolor: "green" }} align="right" variant="contained">Contained</Button>
-
-                <Button sx={{ bgcolor: "red" }} align="right" variant="contained">DELETE</Button>
+      <Container>
+        <h2>Total Order: {buyerOrders.length}</h2>
+        <TableContainer component={Paper}>
+          <Table sx={{}} aria-label="Order List">
+            <TableHead>
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell align="right">Email</TableCell>
+                <TableCell align="right">Phone</TableCell>
 
               </TableRow>
-            ))}
-          </TableBody>
+            </TableHead>
+            <TableBody>
+              {buyerOrders.map((buyerOrders) => (
+                <TableRow
+                  id={buyerOrders._id}>
+
+                  <TableCell align="right">{buyerOrders?.buyerName}</TableCell>
+                  <TableCell align="right">{buyerOrders?.email}</TableCell>
+                  <TableCell align="right">{buyerOrders?.phone}</TableCell>
 
 
-        </Table>
-      </TableContainer>
+                  <Button sx={{ m: 2, bgcolor: "green" }} align="right" variant="contained">Approved</Button>
+
+                  <Button sx={{ bgcolor: "red" }} onClick={() => handleDelete(buyerOrders._id)} align="right" variant="contained">CANCEL</Button>
+
+                </TableRow>
+              ))}
+            </TableBody>
+
+
+          </Table>
+        </TableContainer>
+      </Container>
+
+
+
+
+
     </div>
   );
 };

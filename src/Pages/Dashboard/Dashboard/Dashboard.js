@@ -35,7 +35,7 @@ function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-
+  const { user, logout } = useAuth()
   let { path, url } = useRouteMatch();
 
   const { admin } = useAuth();
@@ -49,31 +49,55 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
 
-      <Link to="/dashboard" style={{ textDecoration: 'none' }}><Button color="inherit">Dashboard</Button></Link>
+
+
+
+      <Button onClick={logout} color="inherit" variant="contained">Logout</Button>
+      <br />
       <br />
       <Link to="/products" style={{ textDecoration: 'none' }}><Button color="inherit">All Products</Button></Link>
       <br />
       <Link to="/pay" style={{ textDecoration: 'none' }}><Button color="inherit">Pay</Button></Link>
       <br />
+      <Link to="/reviewBox" style={{ textDecoration: 'none' }}><Button color="inherit">Customer Review Section</Button></Link>
+      <br />
       <Link to="/manageOrder" style={{ textDecoration: 'none' }}><Button color="inherit">Manage Orders</Button></Link>
 
+      <br />
+      <Link to="/myOrders" style={{ textDecoration: 'none' }}><Button color="inherit">My Orders</Button></Link>
+      <br />
 
+
+      <br />
+
+      <Divider />
+      <Divider />
 
       {
         admin && <Box>
           {/* <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link> */}
           {/* <Link to={`${url}/manageOrder`}><Button color="inherit">Manage Orders</Button></Link> */}
-          <Link to="/orders" style={{ textDecoration: 'none' }}><Button color="inherit">Orders</Button></Link>
+
+
+          <Link to="/addItems" style={{ textDecoration: 'none' }}><Button color="inherit">Add Items</Button></Link>
           <br />
+
+          <Link to="/orders" style={{ textDecoration: 'none' }}><Button color="inherit">All Orders</Button></Link>
+          <br />
+
 
           <Link to="/makeAdmin" style={{ textDecoration: 'none' }}><Button color="inherit">Make Admin</Button></Link>
 
         </Box>
       }
 
+      <Link to="/" style={{ textDecoration: 'none' }} >
+        <Button type="submit" variant="outlined">Home</Button>
+      </Link>
+
 
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Inbox', 'Send email'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

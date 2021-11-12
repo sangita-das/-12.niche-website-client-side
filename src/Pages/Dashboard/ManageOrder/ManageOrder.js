@@ -16,20 +16,20 @@ const ManageOrder = () => {
   const { productId } = useParams()
   const [productDetails, setProductDetails] = useState([]);
 
-  const [singleProduct, setSingleProduct] = useState({})
+  // const [singleProduct, setSingleProduct] = useState({})
 
   // all data load
   useEffect(() => {
-    fetch('/bicycle.json')
+    fetch(`http://localhost:5000/items/${productId}`)
       .then(res => res.json())
       .then(data => setProductDetails(data))
   }, []);
 
   // single data load
-  useEffect(() => {
-    const foundProduct = productDetails.find(product => product.id === productId)
-    setSingleProduct(foundProduct);
-  }, [productDetails])
+  // useEffect(() => {
+  //   const foundProduct = productDetails.find(product => product.id === productId)
+  //   setSingleProduct(foundProduct);
+  // }, [productDetails])
 
 
 
@@ -44,20 +44,20 @@ const ManageOrder = () => {
 
           <Box >
             <Box >
-              <img src={singleProduct?.img} alt="" />
+              <img src={productDetails?.img} alt="" />
             </Box>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Product Name: {singleProduct?.name}
+                Product Name: {productDetails?.name}
               </Typography>
               <Typography variant="body2" gutterBottom component="div">
-                {singleProduct?.speciality}
+                {productDetails?.speciality}
               </Typography>
               <Typography variant="h6" color="text.secondary">
-                Category: {singleProduct?.category}
+                Category: {productDetails?.category}
               </Typography>
               <Typography variant="h5" >
-                price: {singleProduct?.BDT}
+                price: {productDetails?.BDT}
               </Typography>
 
               <Rating
@@ -85,7 +85,8 @@ const ManageOrder = () => {
       </Grid >
 
       <BookingModal
-        singleProduct={singleProduct}
+        // singleProduct={singleProduct}
+        productDetails={productDetails}
         OpenBooking={OpenBooking}
         handleBookingClose={handleBookingClose}
         setBookingSuccess={setBookingSuccess}
