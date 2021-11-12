@@ -1,10 +1,9 @@
 import { Container, Rating } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Box } from '@mui/system';
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
-import StarIcon from '@mui/icons-material/Star';
+
 
 
 
@@ -32,30 +31,18 @@ const formInput = {
   marginBottom: "10px"
 }
 
-const labels = {
-  0.5: 'Useless',
-  1: 'Useless+',
-  1.5: 'Poor',
-  2: 'Poor+',
-  2.5: 'Ok',
-  3: 'Ok+',
-  3.5: 'Good',
-  4: 'Good+',
-  4.5: 'Excellent',
-  5: 'Excellent+',
-};
+
 
 
 const ReviewBox = () => {
 
-  const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);
+
 
   const classes = useStyles();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
     console.log(data);
-    axios.post('http://localhost:5000/reviews', data)
+    axios.post('https://peaceful-beach-69061.herokuapp.com/reviews', data)
       .then(res => {
         // console.log(res);
         if (res.data.insertedId) {
@@ -74,31 +61,14 @@ const ReviewBox = () => {
         <form style={{ ...formStyle }} onSubmit={handleSubmit(onSubmit)}>
 
 
-          <Box
-            sx={{
-              width: 200,
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <Rating
-              name="hover-feedback"
-              value={value}
-              precision={0.5}
-              onChange={(event, newValue) => {
-                setValue(newValue);
-              }}
-              onChangeActive={(event, newHover) => {
-                setHover(newHover);
-              }}
-              emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-            />
-            {value !== null && (
-              <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-            )}
-          </Box>
 
 
+          <Rating
+            initialRating={3}
+            emptySymbol="far fa-star-o fa-2x"
+            fullSymbol="fas fa-star "
+
+          />
 
           <input style={formInput}  {...register("name", { required: true, maxLength: 20 })} placeholder="name" />
           <textarea style={formInput} {...register("description")} placeholder="Comment" />

@@ -55,7 +55,7 @@ function Dashboard(props) {
       <Button onClick={logout} color="inherit" variant="contained">Logout</Button>
       <br />
       <br />
-      <Link to="/products" style={{ textDecoration: 'none' }}><Button color="inherit">All Products</Button></Link>
+      <Link to="/products" style={{ textDecoration: 'none' }}><Button color="inherit">Products</Button></Link>
       <br />
       <Link to="/pay" style={{ textDecoration: 'none' }}><Button color="inherit">Pay</Button></Link>
       <br />
@@ -83,6 +83,9 @@ function Dashboard(props) {
           <br />
 
           <Link to="/orders" style={{ textDecoration: 'none' }}><Button color="inherit">All Orders</Button></Link>
+          <br />
+
+          <Link to="/allProducts" style={{ textDecoration: 'none' }}><Button color="inherit">All Products</Button></Link>
           <br />
 
 

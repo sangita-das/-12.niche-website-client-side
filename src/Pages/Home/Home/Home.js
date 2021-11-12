@@ -10,6 +10,7 @@ import SingleProduct from './SingleProduct/SingleProduct';
 import SendIcon from '@mui/icons-material/Send';
 import Review from '../Review/Review';
 import Reviews from './Reviews/Reviews';
+import About from './About/About';
 
 
 
@@ -17,7 +18,7 @@ import Reviews from './Reviews/Reviews';
 const Home = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/items')
+    fetch('https://peaceful-beach-69061.herokuapp.com/items')
       .then(res => res.json())
       .then(data => setProducts(data.slice(0, 6)));
   }, []);
@@ -27,6 +28,8 @@ const Home = () => {
 
 
       <Banner></Banner>
+
+      <About></About>
       <Services></Services>
 
       <Box sx={{ flexGrow: 1 }}>

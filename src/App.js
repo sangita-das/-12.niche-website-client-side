@@ -24,6 +24,7 @@ import ReviewBox from './Pages/Home/Home/ReviewBox/ReviewBox';
 import Review from './Pages/Home/Review/Review';
 import Reviews from './Pages/Home/Home/Reviews/Reviews';
 import Header from './Pages/Shared/Header/Header';
+import AllProducts from './Pages/Dashboard/Dashboard/AllProducts/AllProducts';
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
             <Route exact path="/products">
               <Products />
             </Route>
+            <PrivateRoute exact path="/allProducts">
+              <AllProducts />
+            </PrivateRoute>
             <PrivateRoute exact path="/makeAdmin">
               <MakeAdmin />
             </PrivateRoute>

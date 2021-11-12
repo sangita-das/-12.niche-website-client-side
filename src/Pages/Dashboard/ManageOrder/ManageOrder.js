@@ -20,7 +20,7 @@ const ManageOrder = () => {
 
   // all data load
   useEffect(() => {
-    fetch(`http://localhost:5000/items/${productId}`)
+    fetch(`https://peaceful-beach-69061.herokuapp.com/items/${productId}`)
       .then(res => res.json())
       .then(data => setProductDetails(data))
   }, []);

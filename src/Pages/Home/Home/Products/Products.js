@@ -11,7 +11,7 @@ import { Container } from '@mui/material';
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/items')
+    fetch('https://peaceful-beach-69061.herokuapp.com/items')
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);

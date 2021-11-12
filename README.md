@@ -11,13 +11,15 @@
 >E-Bikes, pedelecs and electric bikes – What’s the difference?
 >Are you considering the buying an electric bike? When starting to shop around, you’ll soon come across different terms and perhaps ask yourself what they all mean. What’s more, everyday vernacular differs from the definitions under road traffic law.
 
+- Here are a few things that differentiates us from some of the other bike stores
+
 
 * Explore Best Products (Exclusive 2021 collection)
-* Reasonable price with special offer 
-* Available services 
-* Different colors and accessors collection
-* e-bikes now come in all conceivable variants 
-* visit our website, and finding Your Dreame Bicycle that you're looking.
+* Assured Quality
+* Honest Advice  
+* Demo Bikes & Bike Fitting
+* Support and Service  
+
 
 - E-Bike with a front motor: power is provided via the front-wheel hub.
 

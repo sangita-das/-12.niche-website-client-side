@@ -47,7 +47,7 @@ const BookingModal = ({ OpenBooking, handleBookingClose, productDetails, setBook
     console.log(product);
 
     // send to the server
-    fetch('http://localhost:5000/products', {
+    fetch('https://peaceful-beach-69061.herokuapp.com/products', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

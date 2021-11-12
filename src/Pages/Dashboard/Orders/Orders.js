@@ -5,7 +5,7 @@ const Orders = () => {
   const [buyerOrders, setBuyerOrders] = useState([])
   console.log(buyerOrders);
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('https://peaceful-beach-69061.herokuapp.com/products')
       .then(res => res.json())
       .then(data => setBuyerOrders(data))
 
@@ -15,7 +15,7 @@ const Orders = () => {
   const handleDelete = id => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://peaceful-beach-69061.herokuapp.com/products/${id}`;
       fetch(url, {
         method: 'DELETE'
       })

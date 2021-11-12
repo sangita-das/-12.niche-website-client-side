@@ -35,7 +35,7 @@ const AddItems = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
     console.log(data);
-    axios.post('http://localhost:5000/items', data)
+    axios.post('https://peaceful-beach-69061.herokuapp.com/items', data)
       .then(res => {
         // console.log(res);
         if (res.data.insertedId) {
