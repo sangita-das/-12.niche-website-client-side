@@ -1,6 +1,6 @@
 ## Website Name: RoadPedal
 
-**Netlify Live site[].**
+**Netlify Live site[https://roadpedal-bicycle-sales-website.netlify.app/].**
 
 **Firebase Live site[https://bicycles-shop-road-pedal.web.app/].**
 
