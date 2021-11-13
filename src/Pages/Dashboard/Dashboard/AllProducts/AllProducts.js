@@ -19,7 +19,7 @@ const AllProducts = () => {
   const handleDelete = id => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if (proceed) {
-      const url = `https:/peaceful-beach-69061.herokuapp.com/items/${id}`;
+      const url = `https://peaceful-beach-69061.herokuapp.com/items/${id}`;
       fetch(url, {
         method: 'DELETE'
       })
