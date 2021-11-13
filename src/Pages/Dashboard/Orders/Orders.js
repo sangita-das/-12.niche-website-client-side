@@ -1,4 +1,4 @@
-import { Button, Container, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Button, Container, Link, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 const Orders = () => {
@@ -60,9 +60,9 @@ const Orders = () => {
                   <TableCell align="right">{buyerOrders?.phone}</TableCell>
 
 
-                  <Button sx={{ m: 2, bgcolor: "green" }} align="right" variant="contained">Approved</Button>
+                  <Link href={`/updateUser/${buyerOrders._id}`}> <Button sx={{ m: 2, bgcolor: "green" }} align="right" variant="contained">Upadate</Button></Link>
 
-                  <Button sx={{ bgcolor: "red" }} onClick={() => handleDelete(buyerOrders._id)} align="right" variant="contained">CANCEL</Button>
+                  <Button sx={{ bgcolor: "red" }} onClick={() => handleDelete(buyerOrders._id)} align="right" variant="contained">DELETE</Button>
 
                 </TableRow>
               ))}

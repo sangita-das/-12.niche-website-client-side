@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Divider, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import Review from '../../Review/Review';
@@ -16,7 +16,8 @@ const Reviews = () => {
         <Typography sx={{ fontWeight: 600, m: 4, color: 'success.main' }} variant="h4" component="div">
           Buyer Review
         </Typography>
-
+        <Divider />
+        <Divider />
 
 
         <br />

@@ -4,47 +4,47 @@
     "profession": "Sales Manager",
     "description": "In this day of age where we are all bombarded by trinkets that seem to be designed to limit our ability focus on any one person or topic longer than a half-minute, the quality of service seen at the Reston Bike Lane is appreciated.",
     "img": "https://templates.envytheme.com/herobike/default/assets/img/client-avatar3.jpg",
-    "id": "11",
-    "email": "hayden@gmail.com"
+    "email": "hayden@gmail.com",
+    "star": 5
   },
   {
     "name": "Quinn Nolan",
     "profession": "Teacher",
     "description": " I just purchased a 2013 Domane from the Springfield store. Wayne and Zack were my sales representatives, and I want to pass along to you that I had an excellent experience working with them.Again, I enjoyed my experience at RoadPedal BikeLane.",
     "img": "https://templates.envytheme.com/herobike/default/assets/img/client-avatar2.jpg",
-    "id": "12",
-    "email": "nolan@gmail.com"
+    "email": "nolan@gmail.com",
+    "star": 4.5
   },
   {
     "name": "Sammy Peters",
     "profession": "student",
     "description": "I am very impressed with the integrity of you, Todd, and your staff.  Your competitors in the area were happy to put me on bike's that would have been overkill at this time, for more than twice the cost of the Stache 8.  Sean was very helpfull in advising me on all the options I didn't need to spend money on at this time.   That is greatly appreciated.",
     "img": "https://templates.envytheme.com/herobike/default/assets/img/client-avatar1.jpg",
-    "id": "13",
-    "email": "sammy@gmail.com"
+    "email": "sammy@gmail.com",
+    "star": 5
   },
   {
     "name": "Jhon Rock",
     "profession": "student",
     "description": "I had a fantastic experience today buying my first road bike. I'm pretty intimidated by the sport, but Wayne never treated me like I was stupid. No question was too dumb.Thanks again for a great experience, and I look forward to more!",
     "img": "https://templatekits.themewarrior.com/roadpedal/wp-content/uploads/sites/29/2021/08/testimo1.jpg",
-    "id": "14",
-    "email": "jhon@rock.com"
+    "email": "jhon@rock.com",
+    "star": 4
   },
   {
     "name": "Olivar Thomas",
     "profession": "Teacher",
     "description": "I brought my Trek bike in to get the brakes adjusted. Not only did Daniel see me right away, but also he went above-and-beyond in checking out the bike. He adjusted the brakes, but he also went ahead and adjusted the derailleur when he found it faulty.",
     "img": "https://templatekits.themewarrior.com/roadpedal/wp-content/uploads/sites/29/2021/08/testi06.jpg",
-    "id": "15",
-    "email": "thomas@gmail.com"
+    "email": "thomas@gmail.com",
+    "star": 5
   },
   {
     "name": "David Smith",
     "profession": "Doctor",
     "description": "I wanted to send you a note and say how awesome Wayne is.  I called around to get information and he is the only one that took the time to look to see if the bike I wanted was available.  So I drive an hour to see him and he could not have been nicer.  And just so you know I bought the Trek 7.7 2013.",
     "img": "https://templatekits.themewarrior.com/roadpedal/wp-content/uploads/sites/29/2021/08/testi03.jpg",
-    "id": "16",
-    "email": "david@smith.com"
+    "email": "david@smith.com",
+    "star": 4.5
   }
 ]

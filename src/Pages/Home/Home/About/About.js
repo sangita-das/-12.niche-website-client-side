@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
 import about from '../../../../images/about.jpg'
 
@@ -10,17 +10,20 @@ const About = () => {
 
           <Grid item sx={{ mt: 8 }} xs={12} md={6}>
 
-            <Typography variant="h2" gutterBottom>
+            <Typography variant="h2" gutterBottom sx={{ color: "green" }}>
               About Us
             </Typography>
+            <Divider />
+            <Divider />
+
             <Typography variant="h6" gutterBottom>
-              “ To ensure riders have fun on bikes. ”
+              “ To ensure riders have fun on bikes.”
             </Typography>
 
 
             <Typography variant="body1" gutterBottom>
               The History:
-              The Road-Pedal was opened in August 2009.There we have shops selling bikes, but with every visit to the local bike store, we realised how discouraging an interaction could be. In time, our frustration became the motivation to open a bike shop which will be honest to customer and their needs, give professional support and service and which will encourage people to try and take up bicycling as a way of life.
+              The Road-Pedal was opened in August 2009.There we have shops selling bikes, but with every visit to the local bike store, we realised how discouraging an interaction could be.In time, our frustration became the motivation to open a bike shop which will be honest to customer and their needs, give professional support and service and which will encourage people to try and take up bicycling as a way of life.
 
 
 
@@ -29,7 +32,7 @@ const About = () => {
 
             <Typography variant="h6" gutterBottom>
 
-              Support and Service : The purchase of every bicycle, you will receive 6 months of servicing free. We also have our weekly rides to help you enjoy the whole experience .Our monthly tech sessions are designed to make you more hands on.
+              Support and Service: The purchase of every bicycle, you will receive 6 months of servicing free.We also have our weekly rides to help you enjoy the whole experience.Our monthly tech sessions are designed to make you more hands on.
             </Typography>
 
 

@@ -1,4 +1,4 @@
-import { Container, Rating } from '@mui/material';
+import { Container } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import axios from 'axios';
 import React from 'react';
@@ -63,18 +63,14 @@ const ReviewBox = () => {
 
 
 
-          <Rating
-            initialRating={3}
-            emptySymbol="far fa-star-o fa-2x"
-            fullSymbol="fas fa-star "
 
-          />
 
           <input style={formInput}  {...register("name", { required: true, maxLength: 20 })} placeholder="name" />
           <textarea style={formInput} {...register("description")} placeholder="Comment" />
           <input style={formInput} type="email" {...register("email")} placeholder="email" />
           <input style={formInput} {...register("profession")} placeholder="profession" />
           <input style={formInput} {...register("img")} placeholder="img url" />
+          <input style={formInput} type="number" {...register("star")} placeholder="rating" />
           <input style={formInput} type="submit" />
         </form>
       </div>

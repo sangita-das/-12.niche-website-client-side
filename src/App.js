@@ -25,6 +25,8 @@ import Review from './Pages/Home/Review/Review';
 import Reviews from './Pages/Home/Home/Reviews/Reviews';
 import Header from './Pages/Shared/Header/Header';
 import AllProducts from './Pages/Dashboard/Dashboard/AllProducts/AllProducts';
+import OrderStatus from './Pages/Dashboard/Dashboard/OrderStatus/OrderStatus';
+import UpdateUser from './Pages/Dashboard/UpdateUser/UpdateUser';
 
 function App() {
   return (
@@ -41,9 +43,19 @@ function App() {
             <PrivateRoute path="/orders">
               <Orders />
             </PrivateRoute>
+
             <PrivateRoute path="/myOrders">
               <MyOrders />
             </PrivateRoute>
+            <PrivateRoute exact path="/orderStatus">
+              <OrderStatus />
+            </PrivateRoute>
+            <PrivateRoute exact path="/updateUser/:id">
+              <UpdateUser />
+            </PrivateRoute>
+            {/* <PrivateRoute exact path="/orders/updateUser/:id">
+              <UpdateUser />
+            </PrivateRoute> */}
             <PrivateRoute path="/pay">
               <Pay />
             </PrivateRoute>

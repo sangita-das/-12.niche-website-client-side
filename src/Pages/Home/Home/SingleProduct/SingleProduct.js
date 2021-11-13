@@ -1,9 +1,10 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Link, Rating, Typography } from '@mui/material';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Link, Typography } from '@mui/material';
 import React from 'react';
 import SendIcon from '@mui/icons-material/Send';
+import Rating from 'react-rating';
 
 const bgColor = {
-  backgroundColor: '#f3e5f5',
+  backgroundColor: '#aed581',
   backgroundBlendMode: 'hard-light',
 
 }
@@ -34,17 +35,20 @@ const SingleProduct = (props) => {
               {BDT}
             </Typography>
 
-            <Rating
-              initialRating={star}
-              emptySymbol="far fa-star  "
-              fullSymbol="fas fa-star "></Rating>
+            <Typography sx={{ color: "#01579b" }}>
+              <Rating
+                initialRating={star}
+                emptySymbol="far fa-star  "
+                fullSymbol="fas fa-star "></Rating>
+
+            </Typography>
 
           </CardContent>
         </CardActionArea>
 
-        <CardActions style={bgColor}>
+        <CardActions style={bgColor} >
           <Link href={`/manageOrder/${_id}`} >
-            <Button sx={{ mx: "auto", width: 200 }} variant="outlined" endIcon={<SendIcon />} size="small" color="primary">
+            <Button sx={{ mx: "auto", width: 200, bgcolor: "#ffeb3b" }} variant="outlined" endIcon={<SendIcon />} size="small" color="primary">
               Add to Cart
             </Button>
           </Link>

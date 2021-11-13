@@ -61,13 +61,12 @@ function Dashboard(props) {
       <br />
       <Link to="/reviewBox" style={{ textDecoration: 'none' }}><Button color="inherit">Customer Review Section</Button></Link>
       <br />
-      <Link to="/manageOrder" style={{ textDecoration: 'none' }}><Button color="inherit">Manage Orders</Button></Link>
 
-      <br />
       <Link to="/myOrders" style={{ textDecoration: 'none' }}><Button color="inherit">My Orders</Button></Link>
       <br />
 
-
+      <Link to="/orders" style={{ textDecoration: 'none' }}><Button color="inherit">All User Orders</Button></Link>
+      <br />
       <br />
 
       <Divider />
@@ -75,15 +74,11 @@ function Dashboard(props) {
 
       {
         admin && <Box>
-          {/* <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link> */}
-          {/* <Link to={`${url}/manageOrder`}><Button color="inherit">Manage Orders</Button></Link> */}
-
 
           <Link to="/addItems" style={{ textDecoration: 'none' }}><Button color="inherit">Add Items</Button></Link>
           <br />
 
-          <Link to="/orders" style={{ textDecoration: 'none' }}><Button color="inherit">All Orders</Button></Link>
-          <br />
+
 
           <Link to="/allProducts" style={{ textDecoration: 'none' }}><Button color="inherit">All Products</Button></Link>
           <br />

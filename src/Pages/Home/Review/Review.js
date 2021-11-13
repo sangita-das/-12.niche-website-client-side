@@ -1,19 +1,20 @@
 import React from 'react';
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Container, Grid } from '@mui/material';
+import { CardActionArea, Grid } from '@mui/material';
 import { Box } from '@mui/system';
+import Rating from 'react-rating';
+
 
 
 
 
 
 const Review = (props) => {
-  const { name, description, img, profession } = props.review;
+  const { name, description, img, profession, star } = props.review;
 
-
+  console.log(props.review);
   return (
     <Grid item xs={4} sm={4} md={4}>
 
@@ -27,6 +28,7 @@ const Review = (props) => {
           />
 
           <CardContent>
+
             <Typography gutterBottom variant="h5" component="div">
               {name}
             </Typography>
@@ -36,6 +38,17 @@ const Review = (props) => {
             <Typography variant="body2" color="text.secondary">
               {description}
             </Typography>
+
+
+            <Typography sx={{ color: "#ffc107" }} >
+              <Rating
+                initialRating={star}
+                emptySymbol="far fa-star  "
+                fullSymbol="fas fa-star "></Rating>
+
+
+            </Typography>
+
 
           </CardContent>
         </CardActionArea>
