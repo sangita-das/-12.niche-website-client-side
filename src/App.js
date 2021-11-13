@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
@@ -21,7 +20,6 @@ import Pay from './Pages/Dashboard/Pay/Pay';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 import AddItems from './Pages/Dashboard/Dashboard/AddItems/AddItems';
 import ReviewBox from './Pages/Home/Home/ReviewBox/ReviewBox';
-import Review from './Pages/Home/Review/Review';
 import Reviews from './Pages/Home/Home/Reviews/Reviews';
 import Header from './Pages/Shared/Header/Header';
 import AllProducts from './Pages/Dashboard/Dashboard/AllProducts/AllProducts';
@@ -53,9 +51,7 @@ function App() {
             <PrivateRoute exact path="/updateUser/:id">
               <UpdateUser />
             </PrivateRoute>
-            {/* <PrivateRoute exact path="/orders/updateUser/:id">
-              <UpdateUser />
-            </PrivateRoute> */}
+
             <PrivateRoute path="/pay">
               <Pay />
             </PrivateRoute>
