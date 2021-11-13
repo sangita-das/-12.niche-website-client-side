@@ -37,7 +37,7 @@ const BookingModal = ({ OpenBooking, handleBookingClose, productDetails, setBook
   }
 
   const handleBookingSubmit = e => {
-    alert('Your Order recorded!');
+    alert('Your Order has been recorded!');
 
     // collect data
     const product = {

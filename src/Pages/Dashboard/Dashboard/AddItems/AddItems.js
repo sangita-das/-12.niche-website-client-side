@@ -53,6 +53,7 @@ const AddItems = () => {
         <input style={formInput} type="number" {...register("price")} placeholder="price" />
         <input style={formInput} {...register("category")} placeholder="category name" />
         <input style={formInput} {...register("img")} placeholder="img url" />
+        <input style={formInput} type="number" {...register("star")} placeholder="rating" />
         <input style={formInput} type="submit" />
       </form>
     </div>

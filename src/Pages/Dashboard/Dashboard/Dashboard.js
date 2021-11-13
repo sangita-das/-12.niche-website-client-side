@@ -80,7 +80,7 @@ function Dashboard(props) {
 
 
 
-          <Link to="/allProducts" style={{ textDecoration: 'none' }}><Button color="inherit">All Products</Button></Link>
+          <Link to="/allProducts" style={{ textDecoration: 'none' }}><Button color="inherit">manage Products</Button></Link>
           <br />
 
 

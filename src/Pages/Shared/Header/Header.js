@@ -21,7 +21,7 @@ const Header = () => {
 
           <Box>
             <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/products">
-              <Button color="inherit">Products</Button>
+              <Button color="inherit">Explore</Button>
             </NavLink>
 
           </Box>

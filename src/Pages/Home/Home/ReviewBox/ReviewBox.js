@@ -46,7 +46,7 @@ const ReviewBox = () => {
       .then(res => {
         // console.log(res);
         if (res.data.insertedId) {
-          alert('product item added successfully');
+          alert('Thanks for your valuable comment.');
           reset();
         }
       })
